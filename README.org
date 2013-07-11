@@ -1,0 +1,57 @@
+* k.
+This repository is a collection of code related to *Knowledge Representation*.
+
+A great overview (54 pages) of Knowledge Representation can be
+found in the three appendices of John Sowa's /Knowledge Representation./
+
+** Appendix A: Summary of Notations
+*** Predicate Calculus
+**** Predicates
+**** Predicate Logic
+**** Formation Rules
+**** Rules of Inference
+**** Rules for Quantifiers
+**** Typed Predicate Logic
+*** Conceptual Graphs
+**** Definition A.2.1: Conceptual Graph
+**** Definition A.2.2: Concept
+**** Definition A.2.3: Conceptual Relation
+**** Definition A.2.4: Lambda Expression
+**** Definition A.2.5: Concept Type
+**** Definition A.2.6: Relation Type
+**** Definition A.2.7: Referent
+**** Definition A.2.8: Context
+**** Definition A.2.9: Coreference Set
+**** Definition A.2.10: Knowledge Base
+**** Transformation Rules
+*** Knowledge Interchange Format
+
+** Appendix B: Sample Ontology
+*** Principles of Ontology
+**** Glossary
+- alignment
+- axiomatized ontology
+- differentiae
+- hierarchy
+- identity conditions
+- integration
+- knowledge base
+- lexicon
+- mixed ontology
+- partial compatibility
+- primitive
+- prototype-based ontology
+- Quine's criterion
+- refinement
+- semantic factoring
+- terminological ontology
+- unification
+*** Top-Level Categories
+*** Role and Relation Types
+*** Thematic Roles
+*** Placement of Thematic Roles
+** Extended Examples
+*** Hotel Reservation System
+*** Library Database
+*** ACE Vocabulary
+*** Translating ACE to Logic
