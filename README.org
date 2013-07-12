@@ -27,6 +27,11 @@ found in the three appendices of John Sowa's /Knowledge Representation./
 *** Knowledge Interchange Format
 
 ** Appendix B: Sample Ontology
+John Sowa's upper ontology encoded into KIF can
+be found at the following link:
+
+http://suo.ieee.org/SUO/ontologies/Sowa.txt
+
 *** Principles of Ontology
 **** Glossary
 - alignment

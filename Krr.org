@@ -1,0 +1,13 @@
+* Krr.org
+Notes on Brachman/Levesque's /Knowledge Representation and Reasoning/ (2004).
+
+According to page xxii, the "core chapters" of /KRR/ are 1,2,3,4,9,11,12,14,16
+** Introduction
+** The Language of First Order Logic
+** Expressing Knowledge
+** Resolution
+** Structured Descriptions
+** Defaults
+** Vagueness, Uncertainty, and Degrees of Belief
+** Actions
+** The Tradeoff between Expressiveness and Tractability
