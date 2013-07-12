@@ -1,7 +1,16 @@
 * Sowa-Kif.org
 A KIF encoding of John Sowa's upper ontology.
 Adapted from http://suo.ieee.org/SUO/ontologies/Sowa.txt
+** Definitions
+(documentation disjoint "Classes X and Y are disjoint iff they share no instances.")
 
+(forall (?class1 ?class2)
+        (<=> (disjoint ?class1 ?class2)
+             (and (Class ?class1)
+                  (Class ?class2)
+                  (not (exists (?x)
+		               (and (instance-of ?x ?class1)
+			            (instance-of ?x ?class2)))))))
 ** Axioms expressing the class hierarchy
 (subclass-of Independent Entity)
 (subclass-of Relative Entity)
@@ -74,3 +83,39 @@ Adapted from http://suo.ieee.org/SUO/ontologies/Sowa.txt
 (documentation Reason "Intention (MA) that has the form of an continuant (C). Unlike a simple description...")
 (documentation Relative "An entity is in a relationship to some other entity....")
 (documentation Schema "A form (IA) that has the structure of a continuant (C). A schema is an abstract...")
+(documentation Script "A form (IA) that has the structure of an occurrent (O). A script is an abstract...")
+(documentation Situation "A nexus (MP) considered as an occurrent (O). A situation mediates the...")
+(documentation Structure "A nexus (MP) considered as a continuant (C). A structure mediates the...")
+
+** General Axioms
+*** AXIOM: X is a subclass of Y only if X and Y are classes...
+*** AXIOM: Every class is a subclass of itself.
+*** AXIOM: There are entities.
+*** AXIOM: Everything is either a class or an entity, but not both.
+*** AXIOM: Only entities are instances of classes, and only classes have instances.
+*** AXIOM: Entity (the class) consists of exactly the entities...
+*** AXIOM: Every class is a subclass of Entity.
+*** AXIOM: The has-relation holds between entities.
+*** AXIOM: Absurdity is a class.
+*** AXIOM: Absurdity has no instances.
+*** AXIOM: Absurdity is a subclass of every class.
+*** AXIOM: Abstract is a class.
+*** AXIOM: ?x is abstract iff it has neither a spatial nor temporal location.
+*** AXIOM: ?x is physical iff it exists at some location at some time.
+*** THEOREM: Abstract and Physical are disjoint.
+*** AXIOM: An independent entity need not bear the "has" relation to anything.
+*** AXIOM: A continuant is an object that exists (and, hence, retains its identity) over time.
+*** AXIOM: If a mediating entity ?m has ?x and ?y, then either ?x has ?y or vice versa.
+*** AXIOM: Continuant and Occurrent are disjoint.
+*** AXIOM: The temp-part-of relation holds between entities and occurrents.
+*** AXIOM: Each temporal part of an occurrent exists at some timepoint.
+*** AXIOM: The spatial-part-of relation holds between entities and occurrents.
+*** AXIOM: Each spatial part of an occurrent exists at some location.
+*** AXIOM: Occurrents have temporal parts.
+*** AXIOM: Occurrents have spatial parts.
+*** AXIOM: Every relative entity necessarily bears the has-relation to some entity...
+*** AXIOM: Independent and Relative are disjoint.
+*** AXIOM: Relative and Mediating are disjoint.
+*** AXIOM: Independent and Relative are disjoint.
+
+** Supplementary Ontology

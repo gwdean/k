@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>Sowa-Kif</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2013-07-12 14:35:46 EDT"/>
+<meta name="author" content="Greg"/>
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #add8e6; font-weight:normal }
+  .target { }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+
+<h1 class="title">Sowa-Kif</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Sowa-Kif.org </a>
+<ul>
+<li><a href="#sec-1.1">1.1 Definitions </a></li>
+<li><a href="#sec-1.2">1.2 Axioms expressing the class hierarchy </a></li>
+<li><a href="#sec-1.3">1.3 Documentation for these classes </a></li>
+<li><a href="#sec-1.4">1.4 General Axioms </a>
+<ul>
+<li><a href="#sec-1.4.1">1.4.1 AXIOM: X is a subclass of Y only if X and Y are classes&hellip; </a></li>
+<li><a href="#sec-1.4.2">1.4.2 AXIOM: Every class is a subclass of itself. </a></li>
+<li><a href="#sec-1.4.3">1.4.3 AXIOM: There are entities. </a></li>
+<li><a href="#sec-1.4.4">1.4.4 AXIOM: Everything is either a class or an entity, but not both. </a></li>
+<li><a href="#sec-1.4.5">1.4.5 AXIOM: Only entities are instances of classes, and only classes have instances. </a></li>
+<li><a href="#sec-1.4.6">1.4.6 AXIOM: Entity (the class) consists of exactly the entities&hellip; </a></li>
+<li><a href="#sec-1.4.7">1.4.7 AXIOM: Every class is a subclass of Entity. </a></li>
+<li><a href="#sec-1.4.8">1.4.8 AXIOM: The has-relation holds between entities. </a></li>
+<li><a href="#sec-1.4.9">1.4.9 AXIOM: Absurdity is a class. </a></li>
+<li><a href="#sec-1.4.10">1.4.10 AXIOM: Absurdity has no instances. </a></li>
+<li><a href="#sec-1.4.11">1.4.11 AXIOM: Absurdity is a subclass of every class. </a></li>
+<li><a href="#sec-1.4.12">1.4.12 AXIOM: Abstract is a class. </a></li>
+<li><a href="#sec-1.4.13">1.4.13 AXIOM: ?x is abstract iff it has neither a spatial nor temporal location. </a></li>
+<li><a href="#sec-1.4.14">1.4.14 AXIOM: ?x is physical iff it exists at some location at some time. </a></li>
+<li><a href="#sec-1.4.15">1.4.15 THEOREM: Abstract and Physical are disjoint. </a></li>
+<li><a href="#sec-1.4.16">1.4.16 AXIOM: An independent entity need not bear the "has" relation to anything. </a></li>
+<li><a href="#sec-1.4.17">1.4.17 AXIOM: A continuant is an object that exists (and, hence, retains its identity) over time. </a></li>
+<li><a href="#sec-1.4.18">1.4.18 AXIOM: If a mediating entity ?m has ?x and ?y, then either ?x has ?y or vice versa. </a></li>
+</ul>
+</li>
+<li><a href="#sec-1.5">1.5 Supplementary Ontology </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Sowa-Kif.org </h2>
+<div class="outline-text-2" id="text-1">
+
+<p>A KIF encoding of John Sowa's upper ontology.
+Adapted from <a href="http://suo.ieee.org/SUO/ontologies/Sowa.txt">http://suo.ieee.org/SUO/ontologies/Sowa.txt</a>
+</p>
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1"><span class="section-number-3">1.1</span> Definitions </h3>
+<div class="outline-text-3" id="text-1.1">
+
+<p>(documentation disjoint "Classes X and Y are disjoint iff they share no instances.")
+</p>
+<p>
+(forall (?class1 ?class2)
+(&lt;=&gt; (disjoint ?class1 ?class2)
+(and (Class ?class1)
+(Class ?class2)
+(not (exists (?x)
+(and (instance-of ?x ?class1)
+(instance-of ?x ?class2)))))))
+</p></div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2"><span class="section-number-3">1.2</span> Axioms expressing the class hierarchy </h3>
+<div class="outline-text-3" id="text-1.2">
+
+<p>(subclass-of Independent Entity)
+(subclass-of Relative Entity)
+(subclass-of Mediating Entity)
+(subclass-of Physical Entity)
+(subclass-of Abstract Entity)
+(subclass-of Continuant Entity)
+(subclass-of Occurrent Entity)
+</p>
+<p>
+(subclass-of Actuality Independent)
+(subclass-of Actuality Physical)
+(subclass-of Form Independent)
+(subclass-of Form Abstract)
+(subclass-of Prehension Physical)
+(subclass-of Prehension Relative)
+(subclass-of Proposition Relative)
+(subclass-of Proposition Abstract)
+(subclass-of Nexus Physical)
+(subclass-of Nexus Mediating)
+(subclass-of Intention Abstract)
+(subclass-of Intention Mediating)
+</p>
+<p>
+(subclass-of Object Actuality)
+(subclass-of Object Continuant)
+(subclass-of Process Actuality)
+(subclass-of Process Occurrent)
+(subclass-of Schema Form)
+(subclass-of Schema Continuant)
+(subclass-of Script Form)
+(subclass-of Script Occurrent)
+(subclass-of Juncture Prehension)
+(subclass-of Juncture Continuant)
+(subclass-of Participation Prehension)
+(subclass-of Participation Occurrent)
+(subclass-of Description Proposition)
+(subclass-of Description Continuant)
+(subclass-of History Proposition)
+(subclass-of History Occurrent)
+(subclass-of Structure Nexus)
+(subclass-of Structure Continuant)
+(subclass-of Situation Nexus)
+(subclass-of Situation Occurrent)
+(subclass-of Reason Intention)
+(subclass-of Reason Continuant)
+(subclass-of Purpose Intention)
+(subclass-of Purpose Occurrent)
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3"><span class="section-number-3">1.3</span> Documentation for these classes </h3>
+<div class="outline-text-3" id="text-1.3">
+
+<p>(documentation Entity "The universal class of individuals, which has no differentiae.")
+(documentation Absurdity "The absurd class, which inherits all differentiae.")
+(documentation Abstract "Pure information as distinguished from any particular encoding of the information.")
+(documentation Physical "An entity that has a location in space-time.")
+(documentation Actuality "A physical entity (P) whose existence is independent (I) of any other entity.")
+(documentation Continuant "A continuant is an entity whose identity continues to be recognizable over time.")
+(documentation Description "A proposition (RA) about a continuant (C). A description is a proposition&hellip;")
+(documentation Form "Abstract Information (A) independent (I) of any encoding or embodiment&hellip;")
+(documentation History "A proposition (RA) about an occurrent (O). A history is a proposition (RA)&hellip;")
+(documentation Independent "An entity characterized by some inherent Firstness, independent of any&hellip;")
+(documentation Intention "Abstraction (A) considered as mediating (M) other entities. Examples of&hellip;")
+(documentation Juncture "A prehension (RP) considered as a continuant (C) during some time interval&hellip;")
+(documentation Mediating "An entity characterized by some Thirdness that brings other entities into a&hellip;")
+(documentation Nexus "A physical entity (P) mediating (M) two or more other entities. Each nexus is a&hellip;")
+(documentation Object "Actuality (IP) considered as a continuant (C), which retains its identity over&hellip;")
+(documentation Occurrent "An entity that does not have a stable identity during any interval of time."&hellip;)
+(documentation Participation "A prehension (RP) considered as an occurrent (O) during the interval of&hellip;")
+(documentation Process "Actuality (IP) considered as an occurrent (O) during the interval of interest.")
+(documentation Prehension "A physcial entity (P) relative (R) to some entity or entities. The has-test&hellip;")
+(documentation Proposition "An abstraction (A) that relates (R) some entity or entities. In logic, the&hellip;")
+(documentation Purpose "Intention (MA) that has the form of an occurrent (O). As an example&hellip;")
+(documentation Reason "Intention (MA) that has the form of an continuant (C). Unlike a simple description&hellip;")
+(documentation Relative "An entity is in a relationship to some other entity&hellip;.")
+(documentation Schema "A form (IA) that has the structure of a continuant (C). A schema is an abstract&hellip;")
+(documentation Script "A form (IA) that has the structure of an occurrent (O). A script is an abstract&hellip;")
+(documentation Situation "A nexus (MP) considered as an occurrent (O). A situation mediates the&hellip;")
+(documentation Structure "A nexus (MP) considered as a continuant (C). A structure mediates the&hellip;")
+</p>
+</div>
+
+</div>
+
+<div id="outline-container-1.4" class="outline-3">
+<h3 id="sec-1.4"><span class="section-number-3">1.4</span> General Axioms </h3>
+<div class="outline-text-3" id="text-1.4">
+
+
+</div>
+
+<div id="outline-container-1.4.1" class="outline-4">
+<h4 id="sec-1.4.1"><span class="section-number-4">1.4.1</span> AXIOM: X is a subclass of Y only if X and Y are classes&hellip; </h4>
+<div class="outline-text-4" id="text-1.4.1">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.2" class="outline-4">
+<h4 id="sec-1.4.2"><span class="section-number-4">1.4.2</span> AXIOM: Every class is a subclass of itself. </h4>
+<div class="outline-text-4" id="text-1.4.2">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.3" class="outline-4">
+<h4 id="sec-1.4.3"><span class="section-number-4">1.4.3</span> AXIOM: There are entities. </h4>
+<div class="outline-text-4" id="text-1.4.3">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.4" class="outline-4">
+<h4 id="sec-1.4.4"><span class="section-number-4">1.4.4</span> AXIOM: Everything is either a class or an entity, but not both. </h4>
+<div class="outline-text-4" id="text-1.4.4">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.5" class="outline-4">
+<h4 id="sec-1.4.5"><span class="section-number-4">1.4.5</span> AXIOM: Only entities are instances of classes, and only classes have instances. </h4>
+<div class="outline-text-4" id="text-1.4.5">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.6" class="outline-4">
+<h4 id="sec-1.4.6"><span class="section-number-4">1.4.6</span> AXIOM: Entity (the class) consists of exactly the entities&hellip; </h4>
+<div class="outline-text-4" id="text-1.4.6">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.7" class="outline-4">
+<h4 id="sec-1.4.7"><span class="section-number-4">1.4.7</span> AXIOM: Every class is a subclass of Entity. </h4>
+<div class="outline-text-4" id="text-1.4.7">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.8" class="outline-4">
+<h4 id="sec-1.4.8"><span class="section-number-4">1.4.8</span> AXIOM: The has-relation holds between entities. </h4>
+<div class="outline-text-4" id="text-1.4.8">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.9" class="outline-4">
+<h4 id="sec-1.4.9"><span class="section-number-4">1.4.9</span> AXIOM: Absurdity is a class. </h4>
+<div class="outline-text-4" id="text-1.4.9">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.10" class="outline-4">
+<h4 id="sec-1.4.10"><span class="section-number-4">1.4.10</span> AXIOM: Absurdity has no instances. </h4>
+<div class="outline-text-4" id="text-1.4.10">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.11" class="outline-4">
+<h4 id="sec-1.4.11"><span class="section-number-4">1.4.11</span> AXIOM: Absurdity is a subclass of every class. </h4>
+<div class="outline-text-4" id="text-1.4.11">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.12" class="outline-4">
+<h4 id="sec-1.4.12"><span class="section-number-4">1.4.12</span> AXIOM: Abstract is a class. </h4>
+<div class="outline-text-4" id="text-1.4.12">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.13" class="outline-4">
+<h4 id="sec-1.4.13"><span class="section-number-4">1.4.13</span> AXIOM: ?x is abstract iff it has neither a spatial nor temporal location. </h4>
+<div class="outline-text-4" id="text-1.4.13">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.14" class="outline-4">
+<h4 id="sec-1.4.14"><span class="section-number-4">1.4.14</span> AXIOM: ?x is physical iff it exists at some location at some time. </h4>
+<div class="outline-text-4" id="text-1.4.14">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.15" class="outline-4">
+<h4 id="sec-1.4.15"><span class="section-number-4">1.4.15</span> THEOREM: Abstract and Physical are disjoint. </h4>
+<div class="outline-text-4" id="text-1.4.15">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.16" class="outline-4">
+<h4 id="sec-1.4.16"><span class="section-number-4">1.4.16</span> AXIOM: An independent entity need not bear the "has" relation to anything. </h4>
+<div class="outline-text-4" id="text-1.4.16">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.17" class="outline-4">
+<h4 id="sec-1.4.17"><span class="section-number-4">1.4.17</span> AXIOM: A continuant is an object that exists (and, hence, retains its identity) over time. </h4>
+<div class="outline-text-4" id="text-1.4.17">
+
+</div>
+
+</div>
+
+<div id="outline-container-1.4.18" class="outline-4">
+<h4 id="sec-1.4.18"><span class="section-number-4">1.4.18</span> AXIOM: If a mediating entity ?m has ?x and ?y, then either ?x has ?y or vice versa. </h4>
+<div class="outline-text-4" id="text-1.4.18">
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-1.5" class="outline-3">
+<h3 id="sec-1.5"><span class="section-number-3">1.5</span> Supplementary Ontology </h3>
+<div class="outline-text-3" id="text-1.5">
+
+</div>
+</div>
+</div>
+<div id="postamble">
+<p class="author"> Author: Greg
+<a href="mailto:greg@greg-Satellite-C855D">&lt;greg@greg-Satellite-C855D&gt;</a>
+</p>
+<p class="date"> Date: 2013-07-12 14:35:46 EDT</p>
+<p class="creator">HTML generated by org-mode 6.33x in emacs 23</p>
+</div>
+</div>
+</body>
+</html>
