@@ -1,0 +1,65 @@
+* Sowa.org
+For decades, John Sowa has been one of the leading lights
+in the discipline of Knowledge Representation. This document
+collects notes on his work.
+** Summary of Notations
+*** Predicate Calculus
+Symbolic logic has two main branches: /propositional logic/ and /predicate logic/.
+
+Propositional logic treats propositions as single units.
+(/p/ -> "Trailer trucks have 18 wheels.")
+
+Predicate logic analyzes propositions into combinations of predicates.
+(/trailerTruck(x)/ and /wheel(x)/ are examples of predicates)
+
+A /predicate/ or /relation/ is a function that maps its arguments
+to the /truth values/ 1/0 or T/F.
+
+/Less than/ (<) is a good example of a predicate. 
+
+#+BEGIN_EXAMPLE
+(< 5 12) => T
+(< 12 5) => F
+#+END_EXAMPLE
+*** Conceptual Graphs
+*** Knowledge Interchange Format
+** Ontology
+Sowa's Ontology is described in detail in his book 
+/Knowledge Representation/. Page 72 presents the 
+top three distinctions in lattice form.
+
+The three distinctions are:
+- I/R/M (Independent/Relative/Mediating) 
+- P/A   (Physical/Abstract)
+- C/O   (Continuant/Occurrent)
+
+Combinations of distinctions:
+- IP (Actuality)
+- IA (Form)
+- RP (Prehension)
+- RA (Proposition)
+- MP (Nexus)
+- MA (Intention)
+
+Three letter concepts
+- IPC (Object)
+- IPO (Process)
+- IAC (Schema)
+- IAO (Script)
+- RPC (Juncture)
+- RPO (Participation)
+- RAC (Description)
+- RAO (History)
+- MPC (Structure)
+- MPO (Situation)
+- MAC (Reason)
+- MAO (Purpose)
+
+The purpose of the ontology is to provide a framework
+of distinctions that can be used to discriminate and
+classify the things that exist and define the words 
+that describe them.
+
+But no fixed collection of distinctions or categories
+is likely to be adequate for describing all things 
+for all time.
